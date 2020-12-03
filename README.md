@@ -21,32 +21,46 @@ A aplicação pode funcionar também em containers, neste caso em um container D
 
 ##### Home - GET
 /
+
 "Raíz" da api, onde é possível visualizar uma mensagem se a api está sendo executada ou não e se a conexão com o banco de dados esta funcional
 
 ##### Criação de uma nova tarefa para um usuário - POST
 /tarefas/nova/idUsuario&tarefa
+
 Cria uma nova tarefa para um usuário, retorna um "OK" para informar que tudo ocorreu do jeito que deveria ser
+
 idUsuário = id do usuário para qual a tarefa será salva
+
 tarefa = descrição da tarefa
 
 ##### Seleção de todas as tarefas de um usuário - GET
 /tarefas/todas/idUsuario
+
 Seleciona todas as tarefas de um respectivo usuário, retorna um json possuindo todas as tarefas dele
+
 idUsuario = id do usuário que terá suas tarefas consultadas
 
 ##### Seleção de todas as tarefas concluídas de um usuário - GET
 /tarefas/todasConcluidas/idUsuario
+
 Seleciona todas as tarefas concluídas de um respectivo usuário, retornando um json com elas
+
 idUsuario = id do usuário que terá suas tarefas concluídas consultadas
 
 ##### Exclusão de uma tarefa de um determinado usuário - DELETE
 /tarefas/deleta/idUsuario&idTarefa
+
 Deleta uma determinada tarefa de um determinado usuário, retorna "OK" caso a solicitação ocorra bem
+
 idUsuario = id do usuário que terá sua tarefa deletada
+
 idTarefa = id da tarefa a ser deletada
 
 ##### Marcação de uma tarefa como concluída - PUT
 /tarefas/conclui/idUsuario&idTarefa
+
 Atualiza como concluída uma determinada tarefa de um determinado usuário, retorna "OK" caso a solicitação ocorra bem
+
 idUsuario = id do usuário que terá sua tarefa maracada como concluída
+
 idTarefa = id da tarefa a ser marcada como concluída
