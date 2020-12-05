@@ -7,14 +7,17 @@ class Database:
     def __init__(self, config):
         self.config = config;
         self.rodando = False
-        self.firebase = None
+        self.database = None
+        self.auth = None
 
     def inicia(self):
         logger.write("Inicializando firebase...")
 
         if not self.rodando:
             try:
-                self.firebase = pyrebase.initialize_app(self.config).database()
+                firebase = pyrebase.initialize_app(self.config)
+                self.database = pyrebase.initialize_app(self.config).database()
+                self.auth = pyrebase.initialize_app(self.config).auth()
                 self.rodando = True
 
                 logger.write("Firebase inicializada com sucesso!")

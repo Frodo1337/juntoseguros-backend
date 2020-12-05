@@ -64,3 +64,21 @@ Atualiza como concluída uma determinada tarefa de um determinado usuário, reto
 idUsuario = id do usuário que terá sua tarefa maracada como concluída
 
 idTarefa = id da tarefa a ser marcada como concluída
+
+##### Criação de um novo usuário - POST
+/usuario/novo/email&senha
+
+Cria um novo usuário
+
+email = endereço de e-mail do usuário
+
+senha = senha provida pelo usuário para acessar a lista
+
+##### Autenticação de um usuário - GET
+/usuario/autentica/email&senha
+
+Autentica um usuário já existente
+
+email = endereço de e-mail do usuário
+
+senha = senha provida pelo usuário para acessar a lista

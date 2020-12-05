@@ -12,7 +12,7 @@ if __name__ == "__main__":
     arquivoCredenciais.close()
 
     db = Database(credenciais)
-    api = Api("127.0.0.1", db)
+    api = Api("0.0.0.0", 5000, db)
 
     db.inicia()
     api.start()
