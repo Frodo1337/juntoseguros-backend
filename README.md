@@ -9,6 +9,8 @@ O desenvolvimento do backend é todo em python e utiliza o serviço firebase do 
 
 O backend funciona seguindo a estrutura restful, conforme o solicitado. Além disso o backend é capaz de salvar arquivos de log de forma local.
 
+É possível executar esta aplicação em container, existe uma Dockerfile para isso no repositório, além de um script "startContainer.sh" para buildar e executar o container.
+
 ### Instalação
 
 Para dar funcionalidade a API, é necessário possuir instalada a versão 3.8 do python. Para as dependências é somente necessário instalar via pip utilizando o arquivo "requirements.txt", neste arquivo estão listadas todas as dependências, isso pode ser feito através do comando "python -m pip install requirements.txt". Caso esteja em ambiente linux é necessário somente executar "chmod +x setup.sh && ./setup.sh". O script setup.sh foi desenvolvido para ambientes que utilizam apt-get como seu gerenciador de pacotes.
